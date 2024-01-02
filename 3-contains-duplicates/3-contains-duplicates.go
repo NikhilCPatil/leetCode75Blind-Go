@@ -9,7 +9,7 @@ func containsDuplicate(nums []int) bool {
     for _, num := range nums {
         if _,ok := duplicateMaps[num]; ok  {
             return true
-        }else {
+		}else{
             duplicateMaps[num] = 1
         }
     }
