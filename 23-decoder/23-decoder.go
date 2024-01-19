@@ -7,7 +7,6 @@ func numDecodings(s string) int {
    
 	  d := make([]int, n+1)
 	   d[0] = 1
-	  fmt.Println(d)
 	   for i:= 1; i <= n; i++ {
 		   if s[i-1] != '0' {
 			  d[i] += d[i-1] 
@@ -17,7 +16,6 @@ func numDecodings(s string) int {
 			   d[i] += d[i-2]
 		   }
 	   }
-	   fmt.Println(d)
 	   return d[n]
    }
    
