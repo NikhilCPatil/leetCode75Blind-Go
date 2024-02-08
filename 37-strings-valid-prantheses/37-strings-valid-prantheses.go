@@ -34,5 +34,5 @@ func isOppning(s rune)bool{
 func main(){
 	s :=  "{[]}}"
 	result := validParantheses(s)
-	fmt.Println("Group Anagram :", result)
+	fmt.Println("Valid :", result)
 }
