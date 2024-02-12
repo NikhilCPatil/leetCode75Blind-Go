@@ -26,7 +26,11 @@ func checkPartation(nums []int, index int, sum int, dp [][]bool) bool {
     }
     if sum == 0 {
         return true
-    }
+	}
+	
+	if dp[index][sum] {
+		return dp[index][sum]
+	}
 
     res := checkPartation(nums, index+1, sum, dp) || checkPartation(nums, index+1, sum-nums[index], dp)
 
